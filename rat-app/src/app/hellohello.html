@@ -7,7 +7,24 @@
 </head>
 <body>
     <h1>yeah bro this is something something</h1>
+    <img [src]="mypic"/> <br><br>
+    <button [disabled]="isEnabled">Click me</button>
     <app-constructor></app-constructor>
 
+
+    <!--
+    
+    template:
+  `
+  <img [src]="mypic"/> <br><br>
+  <button [disabled]="isEnabled">Click me</button>
+
+  `,
+  styles: [` img {
+    height: 1000px;
+    width: auto;
+  }
+  `],
+    -->
 </body>
 </html>

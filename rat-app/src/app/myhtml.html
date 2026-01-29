@@ -12,10 +12,15 @@
     <h1>this is {{"akhila"|lowercase}}</h1>
     <h3>yasss bro {{3+4}}</h3>
     <h1>Hello {{nivalue}}</h1>
+    <h2>Addition of num1:{{num1}} and num2: {{num2}} is {{num1+num2}}</h2>
     <label>
-        Name: <input type="text" [(ngModel)]="nivalue" class="twowaybindbro"/>
+        Name: <input type="text" [(ngModel)]="nivalue" class="twowaybindbro"/><br><br>
+        num1: <input type="number" [(ngModel)]="num1"/>
+        num2: <input type="number" [(ngModel)]="num2"/>
     </label>
+    
     <app-constructor></app-constructor>
+    <app-login></app-login>
 </body>
 </html>
 

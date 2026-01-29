@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,9 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   nivalue: string='';
+  num1: number=0;
+  num2: number=0;
+  mypic: string='.\favicon.ico';
+  isEnabled: boolean=false;
   protected readonly title = signal('');
 }
