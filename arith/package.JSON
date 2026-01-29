@@ -1,0 +1,13 @@
+{
+    "author": "AKHILA SAI",
+    "name": "arith",
+    "version": "0.0.1",
+    "description": "Arithmatic calculator",
+    "main": "mymodule",
+    "dependencies": {
+        "arith": "^1.0.0-beta.1"
+    },
+    "engines": {
+        "node": "*"
+    }
+}

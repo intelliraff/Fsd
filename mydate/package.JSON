@@ -1,0 +1,13 @@
+{
+    "author": "AKHILA SAI",
+    "name": "mydate",
+    "version": "0.0.1",
+    "description": "edo date ni print cheidam",
+    "main": "importsfile",
+    "dependencies": {
+        "mydate": "^1.0.2"
+    },
+    "engines": {
+        "node": "*"
+    }
+}
