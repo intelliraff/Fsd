@@ -1,0 +1,30 @@
+<h1 style="color:blue"> Form Registration </h1>
+
+<form #rvrform="ngForm" (ngSubmit)="onSubmit(rvrform)" novalidate>
+
+  First Name:
+  <input type="text" name="fname" ngModel required #first="ngModel">
+  <br><br>
+
+  Last Name:
+  <input type="text" name="lname" ngModel>
+  <br><br>
+
+  Email ID:
+  <input type="email" name="email" ngModel>
+  <br><br>
+
+  Password:
+  <input type="password" name="pwd" ngModel>
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+  <h3 style="color:red">OUTPUT: {{ rvrform.value | json }}</h3>
+
+  <p>First name value: {{ first.value }}</p>
+  <p>First name valid: {{ first.valid }}</p>
+  <p>Form value: {{ rvrform.value | json }}</p>
+  <p>Form valid: {{ rvrform.valid }}</p>
+
+</form>
