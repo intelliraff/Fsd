@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator-grid {
+        display: flex;
+        flex-wrap: wrap;       
+        width: 600px;          
+        margin: 0 auto;   
+        background-color: rgb(9, 233, 233);     
+        }
+
+        .calc-box {
+            flex: 0 0 50%;         
+            box-sizing: border-box; 
+            padding: 20px;         
+            border: 1px solid #ccc;
+            text-align: center;    
+        }
+
+    </style>
+</head>
+<body style="background-color: aquamarine;">
+    <div class="calculator-grid">
+        <div class="calc-box">
+            <h1>Addition</h1>
+            <input [(ngModel)]="a" placeholder="Enter 1st Number"type="number"/><br/><br/>
+            <input [(ngModel)]="b" placeholder="Enter 2nd Number" type="number"/><br/><br/>
+            <button (click)="Add()">Add</button> <br/><br/> 
+            <p *ngIf="result !== null">Result: {{ result }}</p> 
+        </div>
+        <div class="calc-box">
+            <h1>Subtraction</h1>
+            <input [(ngModel)]="c" placeholder="Enter 1st number" type="number"/> <br/><br/>
+            <input [(ngModel)]="d" placeholder="Enter 2nd number" type="number"/><br/><br/>
+            <button (click)="Sub()">Subtract</button><br/><br/>
+            <p *ngIf="result2 !==null">Result: {{result2}}</p>
+        </div>
+    
+        <div class="calc-box">
+            <h1>Multiplication</h1>
+            <input [(ngModel)]="e" placeholder="Enter 1st number" type="number"/> <br/> <br/>
+            <input [(ngModel)]="f" placeholder="Enter 2nd number" type="number"/> <br/><br/>
+            <button (click)="Mul()">Multiply</button><br/><br/>
+            <p *ngIf="result3!==null">Result: {{result3}}</p>
+        </div>
+        <div class="calc-box">
+            <h1>Division</h1>
+            <input [(ngModel)]="g" placeholder="Enter 1st number" type="number"/> <br/> <br/>
+            <input [(ngModel)]="h" placeholder="Enter 2nd number" type="number"/> <br/> <br/>
+            <button (click)="Div()">Divide</button>
+            <p *ngIf="result4!==null">Result: {{result4}}</p>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
