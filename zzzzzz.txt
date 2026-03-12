@@ -1,0 +1,157 @@
+git config user.name "Your New Username"
+git config --global user.email "yournewemail@example.com"
+
+
+
+
+MONGOSHELL:
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2026-02-11T15:11:02.543+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> sis showdbs
+Uncaught:
+SyntaxError: Missing semicolon. (1:3)
+
+> 1 | sis showdbs
+    |    ^
+  2 |
+
+test> showdbs
+ReferenceError: showdbs is not defined
+test> show dbs
+admin              40.00 KiB
+config             36.00 KiB
+local              80.00 KiB
+rvrjc              20.00 KiB
+student_dashboard   8.00 KiB
+test> show databases
+admin              40.00 KiB
+config             36.00 KiB
+local              80.00 KiB
+rvrjc              20.00 KiB
+student_dashboard   8.00 KiB
+test> use mydb
+switched to db mydb
+mydb> show dbs
+admin              40.00 KiB
+config             72.00 KiB
+local              80.00 KiB
+rvrjc              20.00 KiB
+student_dashboard   8.00 KiB
+mydb> use rvrdb
+switched to db rvrdb
+rvrdb> show collections
+
+rvrdb> db.studentfind()
+TypeError: db.studentfind is not a function
+rvrdb> show tables
+
+mydb> db
+mydbched to db mydb
+mydb> db.getName()
+mydb
+mydb> db.createCollection("student")
+{ ok: 1 }
+mydb> show dba
+MongoshInvalidInputError: [COMMON-10001] 'dba' is not a valid argument for "show".
+mydb> show dbs
+admin              40.00 KiB
+config             88.00 KiB
+local              80.00 KiB
+mydb                8.00 KiB
+rvrjc              20.00 KiB
+student_dashboard   8.00 KiB
+mydb> show collections
+student
+mydb> db.createCollection("studentbro")
+{ ok: 1 }
+mydb> show dbs
+admin              40.00 KiB
+config             88.00 KiB
+local              80.00 KiB
+mydb               16.00 KiB
+rvrjc              20.00 KiB
+student_dashboard   8.00 KiB
+mydb> show collections
+student
+studentbro
+mydb> db.studentbro.drop()
+true
+mydb> show collections
+student
+mydb> Please enter a MongoDB connection string (Default: mongodb://localhost/): mydb> Please enter a MongoDB connection string (Default: mongodb://localhost/): mydb>
+
+
+
+
+mydb> db.student.insertOne({sname: "Akhila",age: 20,collegename: "RVRJC"});
+{
+  acknowledged: true,
+  insertedId: ObjectId('69b263bbb9c440d2b17c2907')
+}
+mydb> db.student.find();
+[
+  {
+    _id: ObjectId('69b263bbb9c440d2b17c2907'),
+    sname: 'Akhila',
+    age: 20,
+    collegename: 'RVRJC'
+  }
+]
+mydb>
+
+
+===========================================================================================================
+mydb> db.student.insertOne({sname: "Akhila",age: 20,collegename: "RVRJC"});
+{
+  acknowledged: true,
+  insertedId: ObjectId('69b263bbb9c440d2b17c2907')
+}
+mydb> db.student.find();
+[
+  {
+    _id: ObjectId('69b263bbb9c440d2b17c2907'),
+    sname: 'Akhila',
+    age: 20,
+    collegename: 'RVRJC'
+  }
+]
+mydb> db.student.insertOne({sname: "Gojo satoru",age: 27,collegename: "Jujutsu high"});
+{
+  acknowledged: true,
+  insertedId: ObjectId('69b2647db9c440d2b17c2908')
+}
+
+mydb> db.student.insertOne({sname: "Nanami",age: 32,collegename: "Jujutsu high"},{sname: "Yuji",age:20,collegename:"Jututsu high"});
+{
+  acknowledged: true,
+  insertedId: ObjectId('69b264c6b9c440d2b17c2909')
+}
+mydb> db.student.find()
+[
+  {
+    _id: ObjectId('69b263bbb9c440d2b17c2907'),
+    sname: 'Akhila',
+    age: 20,
+    collegename: 'RVRJC'
+  },
+  {
+    _id: ObjectId('69b2647db9c440d2b17c2908'),
+    sname: 'Gojo satoru',
+    age: 27,
+    collegename: 'Jujutsu high'
+  },
+  {
+    _id: ObjectId('69b264c6b9c440d2b17c2909'),
+    sname: 'Nanami',
+    age: 32,
+    collegename: 'Jujutsu high'
+  }
+]
+============================================================================================================
